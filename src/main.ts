@@ -41,10 +41,8 @@ async function bootstrap() {
     allowedHeaders: ['Content-Type', 'Authorization', 'x-api-key'],
     credentials: true,
   });
-  
- // FIXED: Explicitly specify '0.0.0.0' as the host parameter
-  const port = process.env.PORT || 10000;
-  await app.listen(port, '0.0.0.0');
+
+  await app.listen(process.env.PORT || 3000);
 }
 
 bootstrap();
